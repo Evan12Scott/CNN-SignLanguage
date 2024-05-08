@@ -1,18 +1,13 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
-import Data_Configuration
+from data_configuration import Data_Configuration
 
 class Overfit_Model:
     
     def build_test_save(file):
 
-        Data_Configuration.config()
-
         # Access the variables defined in config method
-        train_data = Data_Configuration.train_data
-        test_data = Data_Configuration.test_data
-        train_labels = Data_Configuration.train_labels
-        test_labels = Data_Configuration.test_labels
+        train_data, test_data, train_labels, test_labels = Data_Configuration.config()
 
         #Create model
         model = models.Sequential()

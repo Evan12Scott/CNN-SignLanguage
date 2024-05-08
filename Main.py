@@ -1,6 +1,6 @@
-import ASL_CNN_Fit
-import ASL_CNN_Underfit
-import ASL_CNN_Overfit
+from ASL_CNN_Fit import Fit_Model
+from ASL_CNN_Underfit import Underfit_Model
+from ASL_CNN_Overfit import Overfit_Model
 
 class Main:
     while True:
@@ -16,21 +16,22 @@ class Main:
                 print("Invalid input. Please enter a valid number (1, 2, or 3).")
 
         while True:
-            file = input("\nEnter the name of the file you want to save your model in:\n[DO NOT INCLUDE EXTENSION]\n")
+            file_input = input("\nEnter the name of the file you want to save your model in:\n[DO NOT INCLUDE EXTENSION]\n")
 
             try:
-                with open("./Models/" + file + ".keras", "w") as file:  
+                with open("./Models/" + file_input + ".keras", "w") as f:
                     pass
                 break
             except OSError:
                 print("Invalid file name or cannot write to file. Please enter a valid file name.")
-        
+        file = "./Models/" + file_input + ".keras"
+
         if CNN_Num == 1:
-            CNN = ASL_CNN_Fit.build_test_save(file)
-        elif CNN_NUM == 2:
-            CNN = ASL_CNN_Underfit.build_test_save(file)
+            CNN = Underfit_Model.build_test_save(file)
+        elif CNN_Num == 2:
+            CNN = Fit_Model.build_test_save(file)
         else:
-            CNN = ASL_CNN_Overfit.build_test_save(file)
+            CNN = Overfit_Model.build_test_save(file)
         
         while True:
             run_again = input("Do you want to run again? (Y/N):\n").strip().upper()

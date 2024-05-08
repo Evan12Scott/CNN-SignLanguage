@@ -24,3 +24,5 @@ class Data_Configuration:
 
         test_labels = tst_data["label"].to_numpy()
         test_labels = np.reshape(test_labels, (7172, 1))
+
+        return train_data, test_data, train_labels, test_labels
