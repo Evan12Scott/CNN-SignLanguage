@@ -9,6 +9,14 @@ class Underfit_Model:
         # Access the variables defined in config method
         train_data, test_data, train_labels, test_labels = Data_Configuration.config()
 
+        #Create model
+        model = models.Sequential()
+        model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
+        model.add(layers.MaxPooling2D((2, 2)))
+        model.add(layers.Flatten())
+        model.add(layers.Dense(64, activation='relu'))
+        model.add(layers.Dense(26, activation="softmax"))
+
         #Compile and train
         model.compile(optimizer='adam', loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True), metrics=['accuracy'])
         model.fit(train_data, train_labels, epochs=10, validation_data=(test_data, test_labels))
