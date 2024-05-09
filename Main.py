@@ -5,7 +5,7 @@ from ASL_CNN_Overfit import Overfit_Model
 class Main:
     while True:
         while True:
-            CNN_Num = input("\nPick a Convolutional Neural Network Architecture:\n\nEnter the number associated:\n\n(1) - Simple \n(2) - Good Fit\n(3) - Overfit\n")
+            CNN_Num = input("\nPick a Convolutional Neural Network Architecture:\n\nEnter the number associated:\n\n(1) - Underfit \n(2) - Good Fit\n(3) - Overfit\n")
         
             try:
                 CNN_Num = int(CNN_Num)
