@@ -9,7 +9,7 @@ class Overfit_Model:
         # Access the variables defined in config method
         train_data, test_data, train_labels, test_labels = Data_Configuration.config()
 
-        #Create model
+        #Create complex, overfit model
         model = models.Sequential()
         model.add(layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 1)))
         model.add(layers.MaxPooling2D((2, 2)))
