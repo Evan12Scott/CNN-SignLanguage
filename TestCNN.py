@@ -1,3 +1,8 @@
+"""
+Authors: Evan Scott, Kieran Kennedy, Sean Pala
+Last Modified: 5/12/24
+Description:
+"""
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
