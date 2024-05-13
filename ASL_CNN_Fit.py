@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
-from Data_Configuration import Data_Configuration
+from data_Configuration import Data_Configuration
 
 class Fit_Model:
     
