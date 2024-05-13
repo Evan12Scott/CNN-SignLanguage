@@ -1,13 +1,13 @@
-from ASL_CNN_Fit import Fit_Model
-from ASL_CNN_Underfit import Underfit_Model
-from ASL_CNN_Overfit import Overfit_Model
+from ASL_CNN_Balanced import Balanced_Model
+from ASL_CNN_Simple import Simple_Model
+from ASL_CNN_Complex import Complex_Model
 
 class Main:
     # execute program till user stops
     while True:
         # model type handler
         while True:
-            CNN_Num = input("\nPick a Convolutional Neural Network Architecture:\n\nEnter the number associated:\n\n(1) - Underfit \n(2) - Good Fit\n(3) - Overfit\n")
+            CNN_Num = input("\nPick a Convolutional Neural Network Architecture:\n\nEnter the number associated:\n\n(1) - Simple \n(2) - Balanced\n(3) - Complex\n")
         
             try:
                 CNN_Num = int(CNN_Num)
@@ -30,11 +30,11 @@ class Main:
 
         # load and test appropriate model based on user input
         if CNN_Num == 1:
-            CNN = Underfit_Model.build_test_save(file)
+            CNN = Simple_Model.build_test_save(file)
         elif CNN_Num == 2:
-            CNN = Fit_Model.build_test_save(file)
+            CNN = Balanced_Model.build_test_save(file)
         else:
-            CNN = Overfit_Model.build_test_save(file)
+            CNN = Complex_Model.build_test_save(file)
         # continue program execution handler
         while True:
             run_again = input("Do you want to run again? (Y/N):\n").strip().upper()

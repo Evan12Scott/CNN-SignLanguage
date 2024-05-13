@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 from data_configuration import Data_Configuration
 
-class Underfit_Model:
+class Simple_Model:
     
     def build_test_save(file):
 
