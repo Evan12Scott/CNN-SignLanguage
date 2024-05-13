@@ -31,16 +31,16 @@ def main():
             im = Image.open("./Images/" + letter + ".png")
             im.convert("RGB")
 
-        im_arr = np.array(im)
-        im_arr = np.divide(im_arr, 255)
-        im_arr = im_arr[:,:,0:1]
-        im_arr = np.reshape(im_arr, (1, 28, 28))
+            im_arr = np.array(im)
+            im_arr = np.divide(im_arr, 255)
+            im_arr = im_arr[:,:,0:1]
+            im_arr = np.reshape(im_arr, (1, 28, 28))
 
-        prediction = model.predict(im_arr)
-        if key[np.argmax(prediction)] == letter:
-            total_correct += 1
-        else:
-            incorrect_letter.append(letter)
+            prediction = model.predict(im_arr)
+            if key[np.argmax(prediction)] == letter:
+                total_correct += 1
+            else:
+                incorrect_letter.append(letter)
     
     print("Testing complete,", (str(total_correct) + "/24"), ("("+ str((total_correct/24)*100) + "%)"))
     print("Incorrectly identified: ", incorrect_letter)
