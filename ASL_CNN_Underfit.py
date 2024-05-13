@@ -1,6 +1,10 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
+<<<<<<< HEAD
 from data_Configuration import Data_Configuration
+=======
+from data_configuration import Data_Configuration
+>>>>>>> refs/remotes/origin/main
 
 class Underfit_Model:
     
@@ -9,7 +13,7 @@ class Underfit_Model:
         # Access the variables defined in config method
         train_data, test_data, train_labels, test_labels = Data_Configuration.config()
 
-        #Create model
+        #Create simple, underfit model
         model = models.Sequential()
         model.add(layers.Conv2D(16, (3, 3), activation='sigmoid', input_shape=(28, 28, 1)))
         model.add(layers.MaxPooling2D((2, 2)))

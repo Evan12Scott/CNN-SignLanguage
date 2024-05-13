@@ -3,7 +3,9 @@ from ASL_CNN_Underfit import Underfit_Model
 from ASL_CNN_Overfit import Overfit_Model
 
 class Main:
+    # execute program till user stops
     while True:
+        # model type handler
         while True:
             CNN_Num = input("\nPick a Convolutional Neural Network Architecture:\n\nEnter the number associated:\n\n(1) - Underfit \n(2) - Good Fit\n(3) - Overfit\n")
         
@@ -14,7 +16,7 @@ class Main:
                 break
             except ValueError:
                 print("Invalid input. Please enter a valid number (1, 2, or 3).")
-
+        # file input handler
         while True:
             file_input = input("\nEnter the name of the file you want to save your model in:\n[DO NOT INCLUDE EXTENSION]\n")
 
@@ -26,13 +28,14 @@ class Main:
                 print("Invalid file name or cannot write to file. Please enter a valid file name.")
         file = "./Models/" + file_input + ".keras"
 
+        # load and test appropriate model based on user input
         if CNN_Num == 1:
             CNN = Underfit_Model.build_test_save(file)
         elif CNN_Num == 2:
             CNN = Fit_Model.build_test_save(file)
         else:
             CNN = Overfit_Model.build_test_save(file)
-        
+        # continue program execution handler
         while True:
             run_again = input("Do you want to run again? (Y/N):\n").strip().upper()
             if run_again in ['Y', 'N']:
