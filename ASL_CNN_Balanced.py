@@ -1,6 +1,10 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
+<<<<<<< HEAD
+from data_Configuration import Data_Configuration
+=======
 from data_configuration import Data_Configuration
+>>>>>>> refs/remotes/origin/main
 
 class Balanced_Model:
     

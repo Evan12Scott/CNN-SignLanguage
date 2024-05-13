@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
-from data_configuration import Data_Configuration
+from data_Configuration import Data_Configuration
 
 class Complex_Model:
     
