@@ -1,7 +1,7 @@
 """
 Authors: Evan Scott, Kieran Kennedy, Sean Pala
 Last Modified: 5/12/24
-Description: Handles the preprocessing of data from ASL dataset to be fit with CNN model
+Description: Handles the preprocessing of data from ASL dataset to be fit with CNN model.
 """
 import pandas as pd
 import numpy as np

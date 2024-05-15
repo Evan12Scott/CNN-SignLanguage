@@ -1,12 +1,13 @@
 """
 Authors: Evan Scott, Kieran Kennedy, Sean Pala
 Last Modified: 5/12/24
-Description:
+Description: Alternate testing option program which tests the CNN balanced model [best performance] against images, outside of the dataset, containing ASL symbols.
 """
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from PIL import Image
+
 
 model = keras.models.load_model("./Models/results.keras")
 key = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]

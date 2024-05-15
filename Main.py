@@ -1,3 +1,8 @@
+"""
+Authors: Evan Scott, Kieran Kennedy, Sean Pala
+Last Modified: 5/12/24
+Description: User interface for interacting with our program such as model selection and file output choice.
+"""
 from ASL_CNN_Balanced import Balanced_Model
 from ASL_CNN_Simple import Simple_Model
 from ASL_CNN_Complex import Complex_Model

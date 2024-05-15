@@ -1,7 +1,7 @@
 """
 Authors: Evan Scott, Kieran Kennedy, Sean Pala
 Last Modified: 5/12/24
-Description:
+Description: CNN model with a more complex layer architecture implementation for ASL image classification.
 """
 import tensorflow as tf
 from tensorflow.keras import layers, models
